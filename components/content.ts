@@ -1,3 +1,16 @@
+import {
+  Search,
+  Rocket,
+  MessageCircleQuestion,
+  ShieldCheck,
+  Braces,
+  MapPinned,
+  Tag,
+  TrendingUp,
+  Feather,
+  BadgeCheck,
+} from "lucide-react";
+
 export const nav = [
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
@@ -10,16 +23,19 @@ export const process = [
     step: "01",
     title: "Discovery call",
     body: "We learn your business — what you do well, what isn't working, and who you're actually competing against. No sales pitch, just questions.",
+    icon: MessageCircleQuestion,
   },
   {
     step: "02",
     title: "Competitor & keyword audit",
     body: "We research what's already working (and what isn't) for other businesses in your space before we design anything.",
+    icon: Search,
   },
   {
     step: "03",
     title: "Build to win",
     body: "We design and build a site made to outperform what's already ranking — not just look nice sitting next to it.",
+    icon: Rocket,
   },
 ];
 
@@ -84,18 +100,22 @@ export const foundationPillars = [
   {
     title: "Security",
     body: "SSL by default and hosting that isn't held together with outdated plugins — table stakes for visitor trust and search rankings alike.",
+    icon: ShieldCheck,
   },
   {
     title: "Schema markup",
     body: "Structured data that tells Google exactly what your business is, where it is, and what you offer — the difference between a plain link and a rich result.",
+    icon: Braces,
   },
   {
     title: "Keyword-mapped structure",
     body: "Every page is built around real search terms your customers use — including the local, location-based searches people actually type — mapped from the competitor & keyword audit, not guessed at after launch.",
+    icon: MapPinned,
   },
   {
     title: "Title tags & meta descriptions",
     body: "The unglamorous stuff that decides whether someone clicks your result or the one above it. Written on purpose, not left blank.",
+    icon: Tag,
   },
 ];
 
@@ -103,13 +123,16 @@ export const whyUs = [
   {
     title: "Real marketing experience, not just design",
     body: "We've run marketing for a $15M company and generated a 5–7x return on ad spend — not just built landing pages and hoped. 20+ years of combined in-house and agency experience on our team means we know what a site actually needs to do, not just how it should look.",
+    icon: TrendingUp,
   },
   {
     title: "Lean by design",
     body: "No sales team, no account managers, no agency overhead. You'll talk to the same person every time. We use AI to handle production work, which is how we deliver agency-level builds for a fraction of the cost — not by cutting corners on the strategy.",
+    icon: Feather,
   },
   {
     title: "Built to be checked, not just believed",
     body: "Every price on this page is real. No portfolio filler, no fake reviews, no ‘Sarah just requested a quote’ pop-ups. If we say it, it's true — and if we can't prove it yet, we won't claim it.",
+    icon: BadgeCheck,
   },
 ];

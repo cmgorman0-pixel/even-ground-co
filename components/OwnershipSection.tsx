@@ -6,7 +6,7 @@ export function OwnershipSection() {
       <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
               We build it. You own it.
             </h2>
             <p className="mt-4 text-muted">
@@ -18,7 +18,7 @@ export function OwnershipSection() {
               disguised as a discount.
             </p>
           </div>
-          <div className="rounded-2xl border border-border bg-background p-8">
+          <div className="rounded-2xl border border-border bg-background p-8 transition-all hover:-translate-y-1 hover:border-clay/30 hover:shadow-xl">
             <ul className="flex flex-col gap-4 text-sm">
               <li className="flex items-start gap-3">
                 <CheckIcon />

@@ -26,6 +26,10 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
+        display: ["var(--font-display)"],
+      },
+      boxShadow: {
+        glow: "0 0 80px -20px rgba(190, 82, 39, 0.35)",
       },
     },
   },

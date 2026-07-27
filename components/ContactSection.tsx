@@ -2,7 +2,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20 text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
           Ready to see how your site could look?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-muted">
@@ -12,7 +12,7 @@ export function ContactSection() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="mailto:hello@evenground.com"
-            className="rounded-full bg-clay px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-clay-dark"
+            className="rounded-full bg-clay px-7 py-3 text-base font-semibold text-white shadow-lg shadow-clay/25 transition-all hover:-translate-y-0.5 hover:bg-clay-dark hover:shadow-xl"
           >
             hello@evenground.com
           </a>

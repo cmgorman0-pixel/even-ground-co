@@ -17,7 +17,7 @@ export function LocationSection({
         <p className="text-sm font-semibold uppercase tracking-widest text-clay">
           {eyebrow}
         </p>
-        <h2 className="mt-3 max-w-2xl text-2xl font-bold tracking-tight sm:text-3xl">
+        <h2 className="mt-3 max-w-2xl font-display text-2xl font-semibold tracking-tight sm:text-3xl">
           {heading}
         </h2>
         <p className="mt-4 max-w-2xl text-muted">{body}</p>

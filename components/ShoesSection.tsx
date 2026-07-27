@@ -5,7 +5,7 @@ export function ShoesSection() {
         <p className="text-sm font-semibold uppercase tracking-widest text-clay">
           We&rsquo;ve been in your shoes
         </p>
-        <h2 className="mt-3 max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
+        <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight sm:text-4xl">
           We&rsquo;ve sat on both sides of the table.
         </h2>
         <p className="mt-4 max-w-2xl text-muted">

@@ -5,7 +5,7 @@ export function PricingSection() {
   return (
     <section id="pricing" className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
           Pricing, published — not hidden behind a call
         </h2>
         <p className="mt-3 max-w-2xl text-muted">
@@ -17,10 +17,10 @@ export function PricingSection() {
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`flex flex-col rounded-2xl border p-8 ${
+              className={`flex flex-col rounded-2xl border p-8 transition-all hover:-translate-y-1 ${
                 tier.featured
-                  ? "border-clay bg-surface shadow-lg shadow-clay/10"
-                  : "border-border bg-surface"
+                  ? "border-clay bg-surface shadow-glow"
+                  : "border-border bg-surface hover:border-clay/30 hover:shadow-xl"
               }`}
             >
               {tier.featured && (
@@ -33,10 +33,10 @@ export function PricingSection() {
                   {tier.tagline}
                 </span>
               )}
-              <h3 className="mt-1 text-xl font-semibold">{tier.name}</h3>
+              <h3 className="mt-1 font-display text-xl font-semibold">{tier.name}</h3>
               <p className="mt-2 text-sm text-muted">{tier.description}</p>
               <div className="mt-6">
-                <span className="text-4xl font-bold tracking-tight">
+                <span className="font-display text-4xl font-semibold tracking-tight">
                   {tier.price}
                 </span>
                 <span className="ml-2 text-sm text-muted">
@@ -62,9 +62,9 @@ export function PricingSection() {
               </ul>
               <a
                 href="#contact"
-                className={`mt-8 rounded-full px-5 py-3 text-center text-sm font-semibold transition-colors ${
+                className={`mt-8 rounded-full px-5 py-3 text-center text-sm font-semibold transition-all hover:-translate-y-0.5 ${
                   tier.featured
-                    ? "bg-clay text-white hover:bg-clay-dark"
+                    ? "bg-clay text-white shadow-md shadow-clay/25 hover:bg-clay-dark hover:shadow-lg"
                     : "border border-border hover:border-clay hover:text-clay"
                 }`}
               >
