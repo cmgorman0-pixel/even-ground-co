@@ -13,9 +13,8 @@ export function OwnershipSection() {
               We&rsquo;ve watched too many small business owners get locked
               into contracts where the agency holds the site — and the
               business — hostage. With Even Ground Co., your site and
-              domain are yours from day one. Monthly support is optional
-              and cancel-anytime, not a hidden six-month contract
-              disguised as a discount.
+              domain are yours from day one, with the login credentials
+              to prove it — not a lock-in dressed up as a discount.
             </p>
           </div>
           <div className="rounded-2xl border border-border bg-background p-8 transition-all hover:-translate-y-1 hover:border-clay/30 hover:shadow-xl">
@@ -26,15 +25,15 @@ export function OwnershipSection() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckIcon />
-                <span>No multi-month minimum contracts.</span>
+                <span>Full login access to your hosting and domain from day one.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckIcon />
-                <span>Cancel monthly support anytime — no penalty.</span>
+                <span>Cancel monthly support anytime — no penalty, no fine print.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckIcon />
-                <span>Transparent pricing published on this page.</span>
+                <span>Take your site and walk if you ever want to leave.</span>
               </li>
             </ul>
           </div>

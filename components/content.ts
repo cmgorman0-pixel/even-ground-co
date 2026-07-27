@@ -51,8 +51,8 @@ export const tiers = [
       "Up to 5 pages",
       "Custom mobile-responsive design",
       "Contact form",
-      "Basic on-page SEO",
-      "Hosting, uptime monitoring & minor edits",
+      "Basic on-page SEO with real title tags & meta descriptions",
+      "SSL, hosting, uptime monitoring & minor edits",
     ],
     featured: false,
   },
@@ -94,7 +94,10 @@ export const tiers = [
 ];
 
 export const foundationIntro =
-  "Before this was an agency, it was ad spend and P&L reports. One thing held true every time: marketing dollars poured into a site with a shaky foundation get wasted. Anyone telling you to start running ads before your site's foundation is right is pointing you the wrong way — so every Foundation build includes what actually matters, not just what's easy to skip.";
+  "Before this was an agency, it was ad spend and P&L reports. One thing held true every time: marketing dollars poured into a site with a shaky foundation get wasted. Anyone telling you to start running ads before your site's foundation is right is pointing you the wrong way.";
+
+export const foundationScope =
+  "Security and real title tags & meta descriptions come standard on every site we build, every tier. Schema markup and a true keyword-mapped structure — the ones built from the competitor & keyword audit — start at the Foundation tier and up.";
 
 export const foundationPillars = [
   {

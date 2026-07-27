@@ -1,4 +1,4 @@
-import { foundationIntro, foundationPillars } from "./content";
+import { foundationIntro, foundationScope, foundationPillars } from "./content";
 import { IconBadge } from "./IconBadge";
 
 export function FoundationSection() {
@@ -11,6 +11,7 @@ export function FoundationSection() {
         <p className="mt-4 max-w-3xl font-display text-lg leading-relaxed text-foreground sm:text-xl">
           {foundationIntro}
         </p>
+        <p className="mt-4 max-w-3xl text-sm text-muted">{foundationScope}</p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {foundationPillars.map((pillar) => (
             <div
