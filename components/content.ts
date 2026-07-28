@@ -15,7 +15,20 @@ export const nav = [
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
   { label: "Why Us", href: "#why-us" },
-  { label: "Contact", href: "#contact" },
+];
+
+export const navDropdowns = [
+  {
+    label: "Locations",
+    items: [
+      { label: "Louisville", href: "/louisville" },
+      { label: "Nashville", href: "/nashville" },
+    ],
+  },
+  {
+    label: "Industries",
+    items: [{ label: "Restaurants", href: "/industries/restaurants" }],
+  },
 ];
 
 export const process = [

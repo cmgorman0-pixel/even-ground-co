@@ -1,4 +1,5 @@
-import { nav } from "./content";
+import { ChevronDown } from "lucide-react";
+import { nav, navDropdowns } from "./content";
 
 export function SiteHeader() {
   return (
@@ -7,7 +8,7 @@ export function SiteHeader() {
         <a href="/" className="font-display text-lg font-semibold tracking-tight">
           Even Ground <span className="text-clay">Co.</span>
         </a>
-        <nav className="hidden gap-8 text-sm font-medium md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           {nav.map((item) => (
             <a
               key={item.href}
@@ -16,6 +17,30 @@ export function SiteHeader() {
             >
               {item.label}
             </a>
+          ))}
+          {navDropdowns.map((dropdown) => (
+            <div key={dropdown.label} className="group relative">
+              <button
+                type="button"
+                className="flex items-center gap-1 text-muted transition-colors hover:text-foreground"
+              >
+                {dropdown.label}
+                <ChevronDown className="h-3.5 w-3.5" />
+              </button>
+              <div className="invisible absolute left-0 top-full w-40 pt-3 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
+                <div className="rounded-xl border border-border bg-surface p-2 shadow-xl">
+                  {dropdown.items.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="block rounded-lg px-3 py-2 text-sm text-foreground transition-colors hover:bg-background hover:text-clay"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           ))}
         </nav>
         <a

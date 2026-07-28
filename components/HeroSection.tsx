@@ -1,3 +1,5 @@
+import { MapPin } from "lucide-react";
+
 export function HeroSection({
   eyebrow,
   headline,
@@ -18,6 +20,10 @@ export function HeroSection({
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-clay">
             {eyebrow}
           </p>
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-muted">
+            <MapPin className="h-3.5 w-3.5 text-clay" />
+            Serving Louisville &amp; Nashville
+          </div>
           <h1 className="font-display text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-6xl">
             {headline}
           </h1>
