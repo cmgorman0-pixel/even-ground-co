@@ -1,21 +1,18 @@
+import { ContactForm } from "./ContactForm";
+
 export function ContactSection() {
   return (
     <section id="contact" className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 py-20 text-center">
+      <div className="mx-auto max-w-2xl px-6 py-20 text-center">
         <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
           Ready to see how your site could look?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-muted">
-          Book a free discovery call — no pitch, no pressure. We&rsquo;ll tell
-          you honestly whether we&rsquo;re a good fit.
+          Tell us a bit about your business — no pitch, no pressure. We&rsquo;ll
+          tell you honestly whether we&rsquo;re a good fit.
         </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <a
-            href="mailto:hello@evenground.com"
-            className="rounded-full bg-clay px-7 py-3 text-base font-semibold text-white shadow-lg shadow-clay/25 transition-all hover:-translate-y-0.5 hover:bg-clay-dark hover:shadow-xl"
-          >
-            hello@evenground.com
-          </a>
+        <div className="mt-8 text-left">
+          <ContactForm />
         </div>
       </div>
     </section>

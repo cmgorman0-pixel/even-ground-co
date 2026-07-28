@@ -33,7 +33,7 @@ export function HeroSection({
               href="#contact"
               className="rounded-full bg-clay px-7 py-3 text-base font-semibold text-white shadow-lg shadow-clay/25 transition-all hover:-translate-y-0.5 hover:bg-clay-dark hover:shadow-xl hover:shadow-clay/30"
             >
-              Book a free discovery call
+              Get a free discovery call
             </a>
             <a
               href="#pricing"

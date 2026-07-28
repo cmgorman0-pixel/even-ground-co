@@ -35,7 +35,7 @@ export default function NashvillePage() {
       <LocationSection
         eyebrow="Now in Nashville"
         heading="Bringing the same experience-first approach to Nashville."
-        body="We built Even Ground Co. in Louisville on real relationships and an audit-first process — no city-page shortcuts. We're bringing that same approach to Nashville: same team, same direct access, no big-agency overhead. That includes Nashville and the surrounding area — Franklin, Brentwood, Murfreesboro, Hendersonville, and Mount Juliet."
+        body="We built Even Ground Co. in Louisville on real relationships and an audit-first process — no city-page shortcuts. We're bringing that same approach to Nashville: same team, same direct access, no big-agency overhead, and no remote sales rep reading from a script. That includes Nashville and the surrounding area — Franklin, Brentwood, Murfreesboro, Hendersonville, and Mount Juliet."
         links={[{ label: "We're also in Louisville", href: "/louisville" }]}
       />
       <ContactSection />

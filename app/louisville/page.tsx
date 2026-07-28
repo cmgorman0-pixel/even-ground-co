@@ -35,7 +35,7 @@ export default function LouisvillePage() {
       <LocationSection
         eyebrow="Proudly Louisville"
         heading="Started right here, built on real relationships."
-        body="Even Ground Co. started in Louisville — no city-page list, no programmatic SEO shortcut. Just real referrals and real client relationships in a city we actually know. We serve Louisville and the surrounding area, including Jeffersontown, St. Matthews, Middletown, Prospect, and New Albany and Jeffersonville across the river."
+        body="Even Ground Co. started in Louisville — no city-page list, no programmatic SEO shortcut. Just real referrals and real client relationships in a city we actually know, not a sales pitch read from a call center in another state. We serve Louisville and the surrounding area, including Jeffersontown, St. Matthews, Middletown, Prospect, and New Albany and Jeffersonville across the river."
         links={[{ label: "We're also in Nashville", href: "/nashville" }]}
       />
       <ContactSection />

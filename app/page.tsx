@@ -28,7 +28,7 @@ export default function Home() {
       <LocationSection
         eyebrow="Now serving Louisville and Nashville"
         heading="Louisville-born. Now serving Nashville too."
-        body="We started Even Ground Co. in Louisville, built on real relationships and referrals — not a city-page list. We're bringing that same audit-first, no-lock-in approach to Nashville next."
+        body="We started Even Ground Co. in Louisville, built on real relationships and referrals — not a city-page list, and not a sales pitch read from a call center in another state. We're bringing that same audit-first, no-lock-in approach to Nashville next."
         links={[
           { label: "See Louisville", href: "/louisville" },
           { label: "See Nashville", href: "/nashville" },

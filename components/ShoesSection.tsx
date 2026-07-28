@@ -13,7 +13,11 @@ export function ShoesSection() {
           arm and a leg for a site or ad campaign that actually works —
           $5,000-a-month retainers to manage ads that are, more often
           than not, the same cookie-cutter playbook run for every
-          client. You&rsquo;re not paying for better work. You&rsquo;re paying for
+          client. We&rsquo;ve seen it from the inside, too: national firms
+          selling &ldquo;local&rdquo; expertise out of a single call center a
+          thousand miles away, with sales reps who rotate out every few
+          months and never actually see the businesses they&rsquo;re calling.
+          You&rsquo;re not paying for better work. You&rsquo;re paying for
           the building and the overhead behind it. We think that&rsquo;s
           backwards. With real experience and the ability to leverage
           tech, we can do this affordably — and you&rsquo;ll talk to the same
