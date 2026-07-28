@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { HeroSection } from "@/components/HeroSection";
 import { RestaurantExampleSection } from "@/components/industries/RestaurantExampleSection";
 import { ShoesSection } from "@/components/ShoesSection";
+import { ResultsSection } from "@/components/ResultsSection";
 import { RestaurantHighlights } from "@/components/industries/RestaurantHighlights";
 import { ProcessSection } from "@/components/ProcessSection";
 import { PricingSection } from "@/components/PricingSection";
@@ -30,6 +31,7 @@ export default function RestaurantsPage() {
       />
       <RestaurantExampleSection />
       <ShoesSection />
+      <ResultsSection />
       <RestaurantHighlights />
       <ProcessSection />
       <PricingSection />

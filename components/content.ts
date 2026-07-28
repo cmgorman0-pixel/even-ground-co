@@ -122,6 +122,25 @@ export const foundationPillars = [
   },
 ];
 
+export const realResults = [
+  {
+    stat: "5–7x",
+    label: "Return on ad spend running marketing for a $15M company",
+  },
+  {
+    stat: "2–3x",
+    label: "More conversions after a website rebuild for a dumpster rental company",
+  },
+  {
+    stat: "6x",
+    label: "ROI on Google Ads for a plumbing company",
+  },
+  {
+    stat: "3x",
+    label: "ROI on Google Ads for an HVAC company",
+  },
+];
+
 export const whyUs = [
   {
     title: "Real marketing experience, not just design",

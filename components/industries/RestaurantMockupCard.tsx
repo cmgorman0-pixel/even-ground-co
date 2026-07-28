@@ -43,9 +43,7 @@ export function RestaurantMockupCard() {
           <p className="font-display text-2xl font-semibold text-white sm:text-3xl">
             Casa del Sol
           </p>
-          <p className="mt-1 text-sm text-white/90">
-            Modern Mexican Kitchen — Louisville, KY
-          </p>
+          <p className="mt-1 text-sm text-white/90">Modern Mexican Kitchen</p>
           <button
             className="mt-3 rounded-full px-4 py-2 text-xs font-semibold text-white"
             style={{ background: "#7A2E1D" }}
@@ -69,11 +67,10 @@ export function RestaurantMockupCard() {
         </div>
 
         <div
-          className="flex items-center justify-between px-6 py-3 text-[11px]"
+          className="flex items-center justify-center px-6 py-3 text-[11px]"
           style={{ background: "#7A2E1D", color: "#FBF3E7" }}
         >
           <span>Open Tue–Sun, 4pm–10pm</span>
-          <span>412 S 4th St, Louisville, KY</span>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { HeroSection } from "@/components/HeroSection";
 import { ShoesSection } from "@/components/ShoesSection";
+import { ResultsSection } from "@/components/ResultsSection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { PricingSection } from "@/components/PricingSection";
 import { FoundationSection } from "@/components/FoundationSection";
@@ -20,6 +21,7 @@ export default function Home() {
         subhead="Even Ground Co. builds professional small business websites for a fraction of what agencies charge. No sales team, no lock-in contracts — just real marketing experience and AI-powered production."
       />
       <ShoesSection />
+      <ResultsSection />
       <ProcessSection />
       <PricingSection />
       <FoundationSection />
