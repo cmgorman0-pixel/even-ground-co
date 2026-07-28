@@ -13,6 +13,7 @@ import { WhyUsSection } from "@/components/WhyUsSection";
 import { LocationSection } from "@/components/LocationSection";
 import { ContactSection } from "@/components/ContactSection";
 import { SiteFooter } from "@/components/SiteFooter";
+import { getUnsplashPhoto } from "@/lib/unsplash";
 
 export const metadata: Metadata = {
   title: "Restaurant Website Design | Even Ground Co.",
@@ -20,7 +21,12 @@ export const metadata: Metadata = {
     "Websites for restaurants in Louisville and Nashville, built mobile-first with an easy-to-update menu, map and hours up front, and real design around your food. Transparent pricing, no lock-in contracts.",
 };
 
-export default function RestaurantsPage() {
+export default async function RestaurantsPage() {
+  const photo = await getUnsplashPhoto(
+    "mexican food tacos vibrant",
+    "Vibrant Mexican dish, example restaurant photography"
+  );
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -29,7 +35,7 @@ export default function RestaurantsPage() {
         headline="A website that gets people in the door, not just looking at your menu online."
         subhead="Even Ground Co. builds restaurant websites for a fraction of what agencies charge — mobile-first design, a menu you can actually update yourself, and hours and location that are impossible to miss. No sales team, no lock-in contracts."
       />
-      <RestaurantExampleSection />
+      <RestaurantExampleSection photo={photo} />
       <ShoesSection />
       <ResultsSection />
       <RestaurantHighlights />

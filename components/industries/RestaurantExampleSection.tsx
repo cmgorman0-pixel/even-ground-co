@@ -1,6 +1,11 @@
+import type { UnsplashPhoto } from "@/lib/unsplash";
 import { RestaurantMockupCard } from "./RestaurantMockupCard";
 
-export function RestaurantExampleSection() {
+export function RestaurantExampleSection({
+  photo,
+}: {
+  photo?: UnsplashPhoto | null;
+}) {
   return (
     <section className="border-t border-border">
       <div className="mx-auto max-w-4xl px-6 py-20">
@@ -17,7 +22,7 @@ export function RestaurantExampleSection() {
           brand.
         </p>
         <div className="mt-10">
-          <RestaurantMockupCard />
+          <RestaurantMockupCard photo={photo} />
         </div>
       </div>
     </section>
