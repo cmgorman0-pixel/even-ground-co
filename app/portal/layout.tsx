@@ -10,7 +10,9 @@ export default function PortalLayout({
           <a href="/" className="font-display text-lg font-semibold tracking-tight">
             Even Ground <span className="text-clay">Co.</span>
           </a>
-          <span className="text-sm text-muted">Client Portal</span>
+          <span className="font-display text-sm font-semibold text-muted">
+            Tally
+          </span>
         </div>
       </header>
       <main className="mx-auto max-w-4xl px-6 py-12">{children}</main>

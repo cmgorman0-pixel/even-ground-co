@@ -9,7 +9,7 @@ import { GbpInsightsCard } from "@/components/portal/GbpInsightsCard";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Dashboard | Even Ground Co.",
+  title: "Tally | Even Ground Co.",
   robots: { index: false, follow: false },
 };
 
@@ -17,10 +17,10 @@ function NotConnected() {
   return (
     <div className="rounded-2xl border border-border bg-surface p-8 text-center">
       <p className="font-display text-lg font-semibold">
-        The client portal isn&rsquo;t connected yet.
+        Tally isn&rsquo;t connected yet.
       </p>
       <p className="mt-2 text-sm text-muted">
-        This dashboard will show up here once it&rsquo;s wired up. Email{" "}
+        Your Tally dashboard will show up here once it&rsquo;s wired up. Email{" "}
         <a href={`mailto:${CONTACT_EMAIL}`} className="text-clay hover:underline">
           {CONTACT_EMAIL}
         </a>{" "}
@@ -91,7 +91,10 @@ export default async function PortalDashboardPage() {
 
   return (
     <div>
-      <h1 className="font-display text-2xl font-semibold tracking-tight">
+      <p className="text-sm font-semibold uppercase tracking-widest text-clay">
+        Tally
+      </p>
+      <h1 className="mt-1 font-display text-2xl font-semibold tracking-tight">
         {client.business_name}
       </h1>
       <p className="mt-1 text-sm text-muted">Your site&rsquo;s stats, at a glance.</p>

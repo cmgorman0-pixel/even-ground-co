@@ -38,7 +38,7 @@ export function LoginForm({ configured }: { configured: boolean }) {
     return (
       <div className="rounded-2xl border border-border bg-surface p-8 text-center">
         <p className="font-display text-lg font-semibold">
-          The client portal isn&rsquo;t connected yet.
+          Tally isn&rsquo;t connected yet.
         </p>
         <p className="mt-2 text-sm text-muted">
           Email{" "}
@@ -56,7 +56,7 @@ export function LoginForm({ configured }: { configured: boolean }) {
       <div className="rounded-2xl border border-clay/30 bg-surface p-8 text-center">
         <p className="font-display text-lg font-semibold">Check your email.</p>
         <p className="mt-2 text-sm text-muted">
-          We sent a login link to {email}. Click it to access your dashboard.
+          We sent a login link to {email}. Click it to open Tally.
         </p>
       </div>
     );
