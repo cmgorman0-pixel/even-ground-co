@@ -9,6 +9,8 @@ import { FoundationSection } from "@/components/FoundationSection";
 import { OwnershipSection } from "@/components/OwnershipSection";
 import { WhyUsSection } from "@/components/WhyUsSection";
 import { LocationSection } from "@/components/LocationSection";
+import { FoundingClientSection } from "@/components/FoundingClientSection";
+import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -40,6 +42,8 @@ export default function NashvillePage() {
         body="We built Even Ground Co. in Louisville on real relationships and an audit-first process — no city-page shortcuts. We're bringing that same approach to Nashville: same team, same direct access, no big-agency overhead, and no remote sales rep reading from a script. That includes Nashville and the surrounding area — Franklin, Brentwood, Murfreesboro, Hendersonville, and Mount Juliet."
         links={[{ label: "We're also in Louisville", href: "/louisville" }]}
       />
+      <FoundingClientSection />
+      <FaqSection />
       <ContactSection />
       <SiteFooter location="Nashville, TN" />
     </div>

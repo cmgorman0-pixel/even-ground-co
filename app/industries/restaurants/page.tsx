@@ -11,6 +11,8 @@ import { FoundationSection } from "@/components/FoundationSection";
 import { OwnershipSection } from "@/components/OwnershipSection";
 import { WhyUsSection } from "@/components/WhyUsSection";
 import { LocationSection } from "@/components/LocationSection";
+import { FoundingClientSection } from "@/components/FoundingClientSection";
+import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getUnsplashPhoto } from "@/lib/unsplash";
@@ -53,6 +55,8 @@ export default async function RestaurantsPage() {
           { label: "See Nashville", href: "/nashville" },
         ]}
       />
+      <FoundingClientSection />
+      <FaqSection />
       <ContactSection />
       <SiteFooter location="Louisville, KY · Nashville, TN" />
     </div>

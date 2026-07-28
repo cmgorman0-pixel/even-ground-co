@@ -9,6 +9,8 @@ import { FoundationSection } from "@/components/FoundationSection";
 import { OwnershipSection } from "@/components/OwnershipSection";
 import { WhyUsSection } from "@/components/WhyUsSection";
 import { LocationSection } from "@/components/LocationSection";
+import { FoundingClientSection } from "@/components/FoundingClientSection";
+import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -40,6 +42,8 @@ export default function LouisvillePage() {
         body="Even Ground Co. started in Louisville — no city-page list, no programmatic SEO shortcut. Just real referrals and real client relationships in a city we actually know, not a sales pitch read from a call center in another state. We serve Louisville and the surrounding area, including Jeffersontown, St. Matthews, Middletown, Prospect, and New Albany and Jeffersonville across the river."
         links={[{ label: "We're also in Nashville", href: "/nashville" }]}
       />
+      <FoundingClientSection />
+      <FaqSection />
       <ContactSection />
       <SiteFooter location="Louisville, KY" />
     </div>

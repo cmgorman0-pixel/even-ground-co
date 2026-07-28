@@ -154,6 +154,45 @@ export const realResults = [
   },
 ];
 
+export const foundingClient = {
+  eyebrow: "Why there aren't testimonials (yet)",
+  heading: "You'd be one of our first clients. We'll treat you like it.",
+  body: "We're not going to make up reviews to fill this space — that's exactly the kind of fake social proof we built this whole site to avoid. What we can offer instead: direct access to the same two people from your first call through launch, no account exec somewhere in a pipeline, and a genuine stake in making your project the one we point to next. Once we've got real client results to show, we'll put them here — not before.",
+};
+
+export const faqs = [
+  {
+    question: "Do I actually own my site?",
+    answer:
+      "Yes. You get full login access to your hosting and domain from day one. If you ever want to leave, you take your site with you — no lock-in, no hostage situation.",
+  },
+  {
+    question: "What if I want to cancel?",
+    answer:
+      "Monthly support is cancel-anytime, no penalty, no fine print. The one-time build fee is yours either way — we don't repossess the site if you stop the monthly plan.",
+  },
+  {
+    question: "How long does a build take?",
+    answer:
+      "Most builds take 2–4 weeks from our first call to launch, depending on the tier and how quickly we get your content and feedback back to us.",
+  },
+  {
+    question: "What's included in the monthly fee?",
+    answer:
+      "Hosting, uptime monitoring, and support are always included. Higher tiers add monthly keyword tracking, Google Business Profile management, and content updates — see the pricing breakdown above for exact tier details.",
+  },
+  {
+    question: "Can I edit the site myself after launch?",
+    answer:
+      "Yes — we build every site so you can make your own text and image updates without calling us. If you'd rather we handle it, that's what the monthly plan covers too.",
+  },
+  {
+    question: "I already have a website — do I need to start over?",
+    answer:
+      "Often, no. On the discovery call we'll tell you honestly whether a redesign or a full rebuild makes more sense for your specific site.",
+  },
+];
+
 export const whyUs = [
   {
     title: "Real marketing experience, not just design",
