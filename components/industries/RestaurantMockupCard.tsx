@@ -39,11 +39,31 @@ export function RestaurantMockupCard({
             >
               Casa del Sol
             </span>
-            <div className="hidden gap-4 text-xs font-medium sm:flex" style={{ color: "#7A2E1D" }}>
-              <span>Menu</span>
-              <span>Reservations</span>
-              <span>Order Online</span>
-              <span>Hours</span>
+            <div className="flex flex-wrap items-center justify-end gap-x-3 gap-y-1 text-[10px] font-semibold tracking-wide sm:gap-x-5 sm:text-xs">
+              <span
+                className="cursor-pointer border-b border-transparent pb-0.5 transition-colors hover:border-current"
+                style={{ color: "#7A2E1D" }}
+              >
+                Menu
+              </span>
+              <span
+                className="cursor-pointer border-b border-transparent pb-0.5 transition-colors hover:border-current"
+                style={{ color: "#7A2E1D" }}
+              >
+                Reservations
+              </span>
+              <span
+                className="cursor-pointer border-b border-transparent pb-0.5 transition-colors hover:border-current"
+                style={{ color: "#7A2E1D" }}
+              >
+                Hours
+              </span>
+              <span
+                className="cursor-pointer rounded-full px-3 py-1 text-white"
+                style={{ background: "#7A2E1D" }}
+              >
+                Order Online
+              </span>
             </div>
           </div>
 
@@ -70,12 +90,17 @@ export function RestaurantMockupCard({
               Casa del Sol
             </p>
             <p className="relative mt-1 text-sm text-white/90">Modern Mexican Kitchen</p>
-            <button
-              className="relative mt-3 rounded-full px-4 py-2 text-xs font-semibold text-white"
-              style={{ background: "#7A2E1D" }}
-            >
-              Reserve a Table
-            </button>
+            <div className="relative mt-3 flex flex-wrap gap-2">
+              <button
+                className="rounded-full px-4 py-2 text-xs font-semibold text-white"
+                style={{ background: "#7A2E1D" }}
+              >
+                Reserve a Table
+              </button>
+              <button className="rounded-full border border-white/70 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm">
+                View Menu
+              </button>
+            </div>
           </div>
 
           <div className="grid grid-cols-3 gap-3 px-4 py-5">
