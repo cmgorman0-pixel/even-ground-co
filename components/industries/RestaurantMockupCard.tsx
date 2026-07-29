@@ -105,10 +105,11 @@ export function RestaurantMockupCard({
           </div>
 
           <div
-            className="flex items-center justify-center px-6 py-3 text-[11px]"
+            className="flex items-center justify-between px-6 py-3 text-[11px]"
             style={{ background: "#7A2E1D", color: "#FBF3E7" }}
           >
             <span>Open Tue–Sun, 4pm–10pm</span>
+            <span>Serving Louisville &amp; Nashville</span>
           </div>
         </div>
       </div>
