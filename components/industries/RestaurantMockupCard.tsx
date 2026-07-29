@@ -7,10 +7,16 @@ const menuItems = [
 ];
 
 export function RestaurantMockupCard({
-  photo,
+  heroPhoto,
+  menuPhotos,
 }: {
-  photo?: UnsplashPhoto | null;
+  heroPhoto?: UnsplashPhoto | null;
+  menuPhotos?: (UnsplashPhoto | null)[];
 }) {
+  const credits = [heroPhoto, ...(menuPhotos ?? [])].filter(
+    (p): p is UnsplashPhoto => Boolean(p)
+  );
+
   return (
     <div>
       <div className="overflow-hidden rounded-2xl border border-border shadow-xl">
@@ -44,17 +50,17 @@ export function RestaurantMockupCard({
           <div
             className="relative mx-4 flex h-40 flex-col items-start justify-end overflow-hidden rounded-xl p-5 sm:h-52"
             style={
-              photo
+              heroPhoto
                 ? undefined
                 : { background: "linear-gradient(135deg, #C0392B, #E8A23D)" }
             }
           >
-            {photo && (
+            {heroPhoto && (
               <>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={photo.url}
-                  alt={photo.alt}
+                  src={heroPhoto.url}
+                  alt={heroPhoto.alt}
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -73,17 +79,29 @@ export function RestaurantMockupCard({
           </div>
 
           <div className="grid grid-cols-3 gap-3 px-4 py-5">
-            {menuItems.map((item) => (
-              <div key={item.name}>
-                <div
-                  className="h-16 rounded-lg sm:h-20"
-                  style={{ background: item.gradient }}
-                />
-                <p className="mt-1.5 text-center text-[11px] font-medium" style={{ color: "#7A2E1D" }}>
-                  {item.name}
-                </p>
-              </div>
-            ))}
+            {menuItems.map((item, index) => {
+              const photo = menuPhotos?.[index];
+              return (
+                <div key={item.name}>
+                  <div
+                    className="h-16 overflow-hidden rounded-lg sm:h-20"
+                    style={photo ? undefined : { background: item.gradient }}
+                  >
+                    {photo && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={photo.url}
+                        alt={photo.alt}
+                        className="h-full w-full object-cover"
+                      />
+                    )}
+                  </div>
+                  <p className="mt-1.5 text-center text-[11px] font-medium" style={{ color: "#7A2E1D" }}>
+                    {item.name}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           <div
@@ -95,17 +113,22 @@ export function RestaurantMockupCard({
         </div>
       </div>
 
-      {photo && (
+      {credits.length > 0 && (
         <p className="mt-2 text-right text-xs text-muted">
-          Photo by{" "}
-          <a
-            href={photo.photographerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-clay hover:underline"
-          >
-            {photo.photographerName}
-          </a>{" "}
+          Photos by{" "}
+          {credits.map((photo, i) => (
+            <span key={photo.photographerUrl}>
+              <a
+                href={photo.photographerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-clay hover:underline"
+              >
+                {photo.photographerName}
+              </a>
+              {i < credits.length - 1 ? ", " : " "}
+            </span>
+          ))}
           on{" "}
           <a
             href="https://unsplash.com/?utm_source=even_ground_co&utm_medium=referral"

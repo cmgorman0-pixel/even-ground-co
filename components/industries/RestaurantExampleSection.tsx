@@ -2,9 +2,11 @@ import type { UnsplashPhoto } from "@/lib/unsplash";
 import { RestaurantMockupCard } from "./RestaurantMockupCard";
 
 export function RestaurantExampleSection({
-  photo,
+  heroPhoto,
+  menuPhotos,
 }: {
-  photo?: UnsplashPhoto | null;
+  heroPhoto?: UnsplashPhoto | null;
+  menuPhotos?: (UnsplashPhoto | null)[];
 }) {
   return (
     <section className="border-t border-border">
@@ -22,7 +24,7 @@ export function RestaurantExampleSection({
           brand.
         </p>
         <div className="mt-10">
-          <RestaurantMockupCard photo={photo} />
+          <RestaurantMockupCard heroPhoto={heroPhoto} menuPhotos={menuPhotos} />
         </div>
       </div>
     </section>

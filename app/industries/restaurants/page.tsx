@@ -24,10 +24,19 @@ export const metadata: Metadata = {
 };
 
 export default async function RestaurantsPage() {
-  const photo = await getUnsplashPhoto(
-    "mexican food tacos vibrant",
-    "Vibrant Mexican dish, example restaurant photography"
-  );
+  const [heroPhoto, tacosPhoto, elotePhoto, margaritaPhoto] = await Promise.all([
+    getUnsplashPhoto(
+      "mexican food tacos vibrant",
+      "Vibrant Mexican dish, example restaurant photography"
+    ),
+    getUnsplashPhoto("tacos al pastor", "Tacos al pastor, example menu photography"),
+    getUnsplashPhoto(
+      "mexican street corn elote",
+      "Elote callejero, example menu photography"
+    ),
+    getUnsplashPhoto("margarita cocktail lime", "Margarita cocktail, example menu photography"),
+  ]);
+  const menuPhotos = [tacosPhoto, elotePhoto, margaritaPhoto];
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -37,7 +46,7 @@ export default async function RestaurantsPage() {
         headline="A website that gets people in the door, not just looking at your menu online."
         subhead="Even Ground Co. builds restaurant websites for a fraction of what agencies charge — mobile-first design, a menu you can actually update yourself, and hours and location that are impossible to miss. No sales team, no lock-in contracts."
       />
-      <RestaurantExampleSection photo={photo} />
+      <RestaurantExampleSection heroPhoto={heroPhoto} menuPhotos={menuPhotos} />
       <ShoesSection />
       <ResultsSection />
       <RestaurantHighlights />
