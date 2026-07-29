@@ -119,6 +119,32 @@ export type Database = {
           }
         ];
       };
+      change_requests: {
+        Row: {
+          id: string;
+          client_id: string;
+          message: string;
+          status: "open" | "in_progress" | "done";
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          client_id: string;
+          message: string;
+          status?: "open" | "in_progress" | "done";
+          created_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["change_requests"]["Insert"]>;
+        Relationships: [
+          {
+            foreignKeyName: "change_requests_client_id_fkey";
+            columns: ["client_id"];
+            isOneToOne: false;
+            referencedRelation: "clients";
+            referencedColumns: ["id"];
+          }
+        ];
+      };
     };
     Views: Record<string, never>;
     Functions: Record<string, never>;

@@ -6,6 +6,8 @@ import { KeywordRankingsCard } from "@/components/portal/KeywordRankingsCard";
 import { TrafficChartCard } from "@/components/portal/TrafficChartCard";
 import { TopPagesCard } from "@/components/portal/TopPagesCard";
 import { GbpInsightsCard } from "@/components/portal/GbpInsightsCard";
+import { ChangeRequestForm } from "@/components/portal/ChangeRequestForm";
+import { ChangeRequestList } from "@/components/portal/ChangeRequestList";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -89,6 +91,12 @@ export default async function PortalDashboardPage() {
 
   const hasRealData = (snapshots ?? []).length > 0;
 
+  const { data: changeRequests } = await supabase
+    .from("change_requests")
+    .select("id, message, status, created_at")
+    .eq("client_id", client.id)
+    .order("created_at", { ascending: false });
+
   return (
     <div>
       <p className="text-sm font-semibold uppercase tracking-widest text-clay">
@@ -111,6 +119,16 @@ export default async function PortalDashboardPage() {
           <TopPagesCard />
           <GbpInsightsCard />
         </div>
+      </div>
+
+      <div className="mt-12 border-t border-border pt-8">
+        <h2 className="font-display text-lg font-semibold">
+          Need something changed?
+        </h2>
+        <div className="mt-4">
+          <ChangeRequestForm />
+        </div>
+        <ChangeRequestList requests={changeRequests ?? []} />
       </div>
     </div>
   );

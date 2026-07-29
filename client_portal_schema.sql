@@ -139,3 +139,29 @@ create policy "stat_snapshots read own" on public.stat_snapshots
       select id from public.client_sites where client_id = public.current_client_id()
     )
   );
+
+-- ============================================================
+-- 5. change_requests -- the in-dashboard messaging panel. A client
+--    types "change my hero text to X" and staff makes the edit by
+--    hand (this is NOT an AI-editor -- see project notes on why:
+--    the whole brand promise is a real person handling changes, not
+--    automation). Clients can read and create their own requests;
+--    updates (status changes) are staff-only via the service role.
+-- ============================================================
+create table if not exists public.change_requests (
+  id uuid primary key default gen_random_uuid(),
+  client_id uuid not null references public.clients(id) on delete cascade,
+  message text not null,
+  status text not null default 'open' check (status in ('open', 'in_progress', 'done')),
+  created_at timestamptz not null default now()
+);
+
+alter table public.change_requests enable row level security;
+
+drop policy if exists "change_requests read own" on public.change_requests;
+create policy "change_requests read own" on public.change_requests
+  for select using (client_id = public.current_client_id());
+
+drop policy if exists "change_requests insert own" on public.change_requests;
+create policy "change_requests insert own" on public.change_requests
+  for insert with check (client_id = public.current_client_id());
