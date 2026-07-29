@@ -1,4 +1,4 @@
-import { Smartphone, UtensilsCrossed, MapPin, Camera } from "lucide-react";
+import { Smartphone, UtensilsCrossed, MapPin, Camera, ShoppingBag, Star } from "lucide-react";
 import { IconBadge } from "@/components/IconBadge";
 
 const highlights = [
@@ -6,6 +6,11 @@ const highlights = [
     title: "Built mobile-first",
     body: "Most \"restaurants near me\" searches happen on a phone, in the car, hungry. Your site has to work there first, not as an afterthought.",
     icon: Smartphone,
+  },
+  {
+    title: "Online ordering, one tap away",
+    body: "Most guests would rather order straight from your own site than a delivery app. We put ordering above the fold, on every page — not buried in a footer link.",
+    icon: ShoppingBag,
   },
   {
     title: "A menu you can update yourself",
@@ -22,6 +27,11 @@ const highlights = [
     body: "If you've got real food photography, we design around it. If you don't yet, we'll tell you honestly that it's worth getting before launch.",
     icon: Camera,
   },
+  {
+    title: "Real reviews, connected honestly",
+    body: "We'll connect your actual Google and Yelp reviews once you have them. No fake widgets, no invented star ratings — same rule as the rest of this site.",
+    icon: Star,
+  },
 ];
 
 export function RestaurantHighlights() {
@@ -35,7 +45,7 @@ export function RestaurantHighlights() {
           Not a generic template with your logo dropped in — the things
           that actually matter for a restaurant, built in from the start.
         </p>
-        <div className="mt-12 grid gap-8 sm:grid-cols-2">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {highlights.map((item) => (
             <div key={item.title}>
               <IconBadge icon={item.icon} />

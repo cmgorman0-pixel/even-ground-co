@@ -1,9 +1,9 @@
 import type { UnsplashPhoto } from "@/lib/unsplash";
 
 const menuItems = [
-  { name: "Tacos al Pastor", gradient: "linear-gradient(135deg, #E8A23D, #C0392B)" },
-  { name: "Elote Callejero", gradient: "linear-gradient(135deg, #D9B44A, #8BC34A)" },
-  { name: "Mango Margarita", gradient: "linear-gradient(135deg, #E8A23D, #8BC34A)" },
+  { name: "Tacos al Pastor", price: "$14", gradient: "linear-gradient(135deg, #E8A23D, #C0392B)" },
+  { name: "Elote Callejero", price: "$8", gradient: "linear-gradient(135deg, #D9B44A, #8BC34A)" },
+  { name: "Mango Margarita", price: "$12", gradient: "linear-gradient(135deg, #E8A23D, #8BC34A)" },
 ];
 
 export function RestaurantMockupCard({
@@ -123,6 +123,12 @@ export function RestaurantMockupCard({
                   </div>
                   <p className="mt-1.5 text-center text-[11px] font-medium" style={{ color: "#7A2E1D" }}>
                     {item.name}
+                  </p>
+                  <p
+                    className="text-center text-[11px] font-semibold"
+                    style={{ color: "#C0392B" }}
+                  >
+                    {item.price}
                   </p>
                 </div>
               );
