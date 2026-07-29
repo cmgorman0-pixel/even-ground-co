@@ -18,12 +18,20 @@
 create table if not exists public.clients (
   id uuid primary key default gen_random_uuid(),
   user_id uuid unique references auth.users(id) on delete set null,
-  contact_email text not null unique,
+  contact_email text not null,
   business_name text not null,
   tier text,
   status text not null default 'active',
   created_at timestamptz not null default now()
 );
+
+-- Case-insensitive uniqueness: auth.users.email casing isn't guaranteed to
+-- match exactly what staff types into contact_email, so a plain `unique`
+-- constraint could let 'Jane@biz.com' and 'jane@biz.com' both exist as
+-- "different" rows for the same real person.
+drop index if exists clients_contact_email_unique_idx;
+create unique index clients_contact_email_unique_idx
+  on public.clients (lower(contact_email));
 
 -- SECURITY DEFINER so RLS policies below can check "is this row mine?"
 -- without a client needing direct visibility into other clients' rows,
@@ -50,7 +58,7 @@ as $$
 begin
   update public.clients
   set user_id = new.id
-  where contact_email = new.email
+  where lower(contact_email) = lower(new.email)
     and user_id is null;
   return new;
 end;
